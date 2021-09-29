@@ -8,7 +8,7 @@ import {
 
 const AddBook = () => {
   const { loading, error, data } = useQuery(getAuthorsQuery);
-  const [addBook, { dataMutation }] = useMutation(addBookMutation);
+  const [addBook] = useMutation(addBookMutation);
 
   const [bookInfo, setBookInfo] = useState({
     name: '',
