@@ -32,7 +32,16 @@ body {
   color: #880e4f;
 }
 
-form {
+#add-author {
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  left: 30%;
+  bottom: 0;
+  width: 400px;
+}
+
+#add-book {
   background: #fff;
   padding: 20px;
   position: fixed;

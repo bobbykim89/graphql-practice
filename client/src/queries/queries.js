@@ -19,7 +19,7 @@ const getAuthorsQuery = gql`
 `;
 
 const addBookMutation = gql`
-  mutation ($name: String!, $genre: String!, $authorId: ID!) {
+  mutation AddBook($name: String!, $genre: String!, $authorId: ID!) {
     addBook(name: $name, genre: $genre, authorId: $authorId) {
       name
       id
@@ -27,8 +27,17 @@ const addBookMutation = gql`
   }
 `;
 
+const addAuthorMutation = gql`
+  mutation AddAuthor($name: String!, $age: Number!) {
+    addAuthor(name: $name, age: $age) {
+      name
+      age
+    }
+  }
+`;
+
 const getBookQuery = gql`
-  query ($id: ID) {
+  query GetBook($id: ID) {
     book(id: $id) {
       id
       name
@@ -46,4 +55,32 @@ const getBookQuery = gql`
   }
 `;
 
-export { getAuthorsQuery, getBooksQuery, addBookMutation, getBookQuery };
+const editBookMutation = gql`
+  mutation EditBook($id: ID!, $name: String!, $genre: String!) {
+    editBook(id: $id, name: $name, genre: $genre) {
+      id
+      name
+      genre
+    }
+  }
+`;
+
+const deleteBookMutation = gql`
+  mutation DeleteBook($id: ID!) {
+    deleteBook(id: $id) {
+      id
+      name
+      genre
+    }
+  }
+`;
+
+export {
+  getAuthorsQuery,
+  getBooksQuery,
+  addBookMutation,
+  getBookQuery,
+  editBookMutation,
+  deleteBookMutation,
+  addAuthorMutation,
+};

@@ -24,7 +24,7 @@ const BookList = () => {
           </li>
         ))}
       </ul>
-      <BookDetails selected={selected} />
+      <BookDetails selected={selected} setSelected={setSelected} />
     </div>
   );
 };
