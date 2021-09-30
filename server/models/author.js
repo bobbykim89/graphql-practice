@@ -1,9 +1,8 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose';
 
-const authorSchema = new Schema({
+const authorSchema = new mongoose.Schema({
   name: String,
   age: Number,
 });
 
-module.exports = mongoose.model('Author', authorSchema);
+export default mongoose.model('Author', authorSchema);

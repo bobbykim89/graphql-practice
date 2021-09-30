@@ -1,8 +1,8 @@
-const express = require('express');
-const { graphqlHTTP } = require('express-graphql');
-const cors = require('cors');
-const schema = require('./schema/schema');
-const connectDB = require('./database/config');
+import express from 'express';
+import { graphqlHTTP } from 'express-graphql';
+import cors from 'cors';
+import { schema } from './schema';
+import connectDB from './database/config';
 
 const app = express();
 

@@ -1,8 +1,8 @@
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
+  dotenv.config();
 }
-
-const mongoose = require('mongoose');
 const MongoUrl = process.env.DB_URL;
 
 const connectDB = async () => {
@@ -18,4 +18,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+export default connectDB;
