@@ -4,7 +4,7 @@ import {
   deleteBookMutation,
   getBookQuery,
   getBooksQuery,
-} from '../queries/queries';
+} from '../queries/bookQuery';
 
 const BookDetails = ({ selected, setSelected }) => {
   const { loading, error, data } = useQuery(getBookQuery, {

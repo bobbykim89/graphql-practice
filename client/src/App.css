@@ -94,3 +94,13 @@ form button {
   box-sizing: border-box;
   color: #fff;
 }
+
+.deleteBtn {
+  color: #fff;
+  background: #ad1457;
+  border: 0;
+  margin-left: 5px;
+  padding: 5px 9px;
+  border-radius: 50%;
+  cursor: pointer;
+}

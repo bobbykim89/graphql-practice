@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 import AddAuthor from './components/AddAuthor';
+import AuthorList from './components/AuthorList';
 
 // apollo client setup
 
@@ -23,7 +24,10 @@ function App() {
               <BookList />
               <AddBook />
             </Route>
-            <Route exact path='/author' component={AddAuthor} />
+            <Route exact path='/author'>
+              <AuthorList />
+              <AddAuthor />
+            </Route>
           </Switch>
         </div>
       </Router>

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import {
-  getAuthorsQuery,
-  addBookMutation,
-  getBooksQuery,
-} from '../queries/queries';
+import { addBookMutation, getBooksQuery } from '../queries/bookQuery';
+
+import { getAuthorsQuery } from '../queries/authorQuery';
 
 const AddBook = () => {
   const { loading, error, data } = useQuery(getAuthorsQuery);

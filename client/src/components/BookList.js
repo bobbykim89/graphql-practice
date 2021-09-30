@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { getBooksQuery } from '../queries/queries';
+import { getBooksQuery } from '../queries/bookQuery';
 import BookDetails from './BookDetails';
 
 const BookList = () => {

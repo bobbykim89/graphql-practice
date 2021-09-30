@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { addAuthorMutation, getAuthorsQuery } from '../queries/queries';
+import { addAuthorMutation, getAuthorsQuery } from '../queries/authorQuery';
 
 const AddAuthor = () => {
   const [addAuthor] = useMutation(addAuthorMutation);

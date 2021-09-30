@@ -26,3 +26,11 @@ export const ADD_AUTHOR = {
     return await author.save();
   },
 };
+
+export const DELETE_AUTHOR = {
+  type: AuthorType,
+  args: { id: { type: GraphQLID } },
+  async resolve(parent, args) {
+    return await Author.findByIdAndDelete(args.id);
+  },
+};
