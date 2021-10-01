@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 import {
   deleteBookMutation,
   getBookQuery,
@@ -51,6 +52,9 @@ const BookDetails = ({ selected, setSelected }) => {
             </Fragment>
           )}
           <button onClick={handleDelete}>Delete Book</button>
+          <Link to={`/edit/${book.id}`}>
+            <button>Edit</button>
+          </Link>
         </div>
       )}
     </div>

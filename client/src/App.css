@@ -65,6 +65,15 @@ body {
   width: 400px;
 }
 
+#edit-book {
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+}
+
 form .field {
   display: grid;
   grid-template-columns: 1fr 1fr;

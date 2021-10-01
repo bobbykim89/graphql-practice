@@ -6,6 +6,7 @@ import AddBook from './components/AddBook';
 import AddAuthor from './components/AddAuthor';
 import AuthorList from './components/AuthorList';
 import Navbar from './components/Layouts/Navbar';
+import EditBook from './components/EditBook';
 
 // apollo client setup
 
@@ -29,6 +30,7 @@ function App() {
               <AuthorList />
               <AddAuthor />
             </Route>
+            <Route path='/edit/:id' component={EditBook} />
           </Switch>
         </div>
       </Router>
