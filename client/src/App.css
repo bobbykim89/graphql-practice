@@ -32,11 +32,26 @@ body {
   color: #880e4f;
 }
 
+#author-list {
+  padding: 0;
+}
+
+#author-list li {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #880e4f;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: #880e4f;
+}
+
 #add-author {
   background: #fff;
   padding: 20px;
   position: fixed;
-  left: 30%;
+  left: 0;
   bottom: 0;
   width: 400px;
 }
@@ -95,12 +110,52 @@ form button {
   color: #fff;
 }
 
-.deleteBtn {
-  color: #fff;
+#author-details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
   background: #ad1457;
-  border: 0;
-  margin-left: 5px;
-  padding: 5px 9px;
-  border-radius: 50%;
-  cursor: pointer;
+  padding: 30px;
+  overflow: auto;
+  box-shadow: -2px -3px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #333;
+  height: 60px;
+  padding: 0 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header span {
+  color: #333;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header span:hover {
+  color: #000;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.logo {
+  color: red;
+  font-size: 20px;
+  text-transform: uppercase;
 }

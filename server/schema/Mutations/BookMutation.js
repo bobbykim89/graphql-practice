@@ -53,3 +53,11 @@ export const DELETE_BOOK = {
     return await Book.findByIdAndDelete(args.id);
   },
 };
+
+export const DELETE_BOOKS_BY_AUTHOR = {
+  type: BookType,
+  args: { authorId: { type: GraphQLID } },
+  async resolve(parent, args) {
+    return await Book.deleteMany({ authorId: args.authorId });
+  },
+};

@@ -5,6 +5,7 @@ import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 import AddAuthor from './components/AddAuthor';
 import AuthorList from './components/AuthorList';
+import Navbar from './components/Layouts/Navbar';
 
 // apollo client setup
 
@@ -18,9 +19,9 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div id='main'>
+          <Navbar />
           <Switch>
             <Route exact path='/'>
-              <h1>Reading List</h1>
               <BookList />
               <AddBook />
             </Route>

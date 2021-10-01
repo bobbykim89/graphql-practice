@@ -3,7 +3,12 @@ import { GraphQLObjectType, GraphQLSchema } from 'graphql';
 // Import queries
 import { GET_BOOK_BY_ID, GET_ALL_BOOKS } from './Queries/Books';
 import { GET_AUTHOR_BY_ID, GET_ALL_AUTHORS } from './Queries/Authors';
-import { ADD_BOOK, DELETE_BOOK, EDIT_BOOK } from './Mutations/BookMutation';
+import {
+  ADD_BOOK,
+  DELETE_BOOK,
+  DELETE_BOOKS_BY_AUTHOR,
+  EDIT_BOOK,
+} from './Mutations/BookMutation';
 import { ADD_AUTHOR, DELETE_AUTHOR } from './Mutations/AuthorMutation';
 
 // Import Mutations
@@ -26,6 +31,7 @@ const Mutation = new GraphQLObjectType({
     addBook: ADD_BOOK,
     editBook: EDIT_BOOK,
     deleteBook: DELETE_BOOK,
+    deleteBooks: DELETE_BOOKS_BY_AUTHOR,
   },
 });
 
